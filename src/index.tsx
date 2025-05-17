@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Assuming you have a basic index.css for global styles
-import App from './App'; // Assuming your main App component is in App.tsx
+import App from './App.js';  // Note the explicit .js extension
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
