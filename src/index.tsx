@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Assuming you have a basic index.css for global styles
 import App from './App.js';  // Note the explicit .js extension
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.ts';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
