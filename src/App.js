@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchSamples } from './api';
+import Auth from './Auth';
 
 function App() {
   const [samples, setSamples] = useState([]);
@@ -31,6 +32,8 @@ function App() {
       <header className="App-header">
         <h1>Cowriter App</h1>
         <p>Your AI-powered writing assistant</p>
+        
+        <Auth />
         
         <div className="status-container">
           {loading ? (
