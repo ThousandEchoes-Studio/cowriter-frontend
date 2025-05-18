@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchSamples } from './api';
 import Auth from './Auth';
+import TextEditor from './TextEditor';
 
 function App() {
   const [samples, setSamples] = useState([]);
@@ -32,10 +33,14 @@ function App() {
       <header className="App-header">
         <h1>Cowriter App</h1>
         <p>Your AI-powered writing assistant</p>
+      </header>
+      
+      <main className="App-main">
+        <div className="auth-section">
+          <Auth />
+        </div>
         
-        <Auth />
-        
-        <div className="status-container">
+        <div className="api-status">
           {loading ? (
             <div className="status-message loading">Connecting to backend...</div>
           ) : error ? (
@@ -47,7 +52,9 @@ function App() {
             </div>
           )}
         </div>
-      </header>
+        
+        <TextEditor />
+      </main>
     </div>
   );
 }
