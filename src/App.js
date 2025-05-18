@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchSamples } from './api';
+import { auth } from './firebase';
 import Auth from './Auth';
 import TextEditor from './TextEditor';
+import AudioUploadContainer from './AudioUploadContainer';
+import AudioRecordingContainer from './AudioRecordingContainer';
 
 function App() {
   const [samples, setSamples] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [user, setUser] = useState(null);
+
+  // Listen for auth state changes
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     // Function to load samples from the API
@@ -54,9 +66,24 @@ function App() {
         </div>
         
         <TextEditor />
+        
+        {user && (
+          <>
+            <div className="feature-section">
+              <h2>Upload Your Musical DNA</h2>
+              <AudioUploadContainer userId={user.uid} />
+            </div>
+            
+            <div className="feature-section">
+              <h2>Record Your Musical Ideas</h2>
+              <AudioRecordingContainer userId={user.uid} />
+            </div>
+          </>
+        )}
       </main>
     </div>
   );
 }
 
 export default App;
+
