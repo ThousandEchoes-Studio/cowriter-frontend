@@ -16,16 +16,5 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="text/javascript">
-      // Force reload of the page if JavaScript fails to load
-      window.onload = function() {
-        if (!window.React) {
-          console.error("React not loaded - forcing page reload");
-          setTimeout(function() {
-            window.location.reload();
-          }, 2000);
-        }
-      };
-    </script>
   </body>
 </html>
