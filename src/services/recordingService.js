@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { storage, db } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import './RecordingService.css';
 
 /**
  * Service for handling audio recording and processing
