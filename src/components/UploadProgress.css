@@ -1,0 +1,179 @@
+.upload-progress {
+  margin-top: 20px;
+}
+
+.overall-progress {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.overall-progress h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.status-text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.file-section {
+  margin-bottom: 25px;
+}
+
+.file-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.file-item.uploading {
+  background-color: #e8f5e9;
+}
+
+.file-item.complete {
+  background-color: #f1f8e9;
+}
+
+.file-item.error {
+  background-color: #ffebee;
+}
+
+.file-item.ready {
+  background-color: #f5f5f5;
+}
+
+.file-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  width: 30px;
+  text-align: center;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  word-break: break-all;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #888;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  right: 5px;
+  top: -18px;
+  font-size: 12px;
+  color: #666;
+}
+
+.file-error {
+  color: #c62828;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.file-success {
+  color: #2e7d32;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+.remove-file:hover {
+  color: #f44336;
+}
+
+.clear-button {
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.clear-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .file-icon {
+    margin-bottom: 10px;
+  }
+  
+  .remove-file {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
